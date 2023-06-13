@@ -1,0 +1,37 @@
+body {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+#item-container {
+    display: grid;
+    gap: 10px;
+}
+
+.item {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.item h2 {
+    margin: 0;
+    color: blue;
+    background-color: red;
+    padding: 5px;
+}
+
+.item input {
+    width: 50px;
+    text-align: center;
+}
