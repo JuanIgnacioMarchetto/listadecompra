@@ -46,8 +46,12 @@ function renderItems() {
         const itemStatus = document.createElement("h2");
         if (item.quantity <= 2) {
             itemStatus.textContent = "Comprar";
+            itemDiv.style.background = "red";
+            itemDiv.style.color = "white";
         } else {
             itemStatus.textContent = "Suficiente";
+            itemDiv.style.background = "green";
+            itemDiv.style.color = "red";
         }
 
         const deleteButton = document.createElement("button");
