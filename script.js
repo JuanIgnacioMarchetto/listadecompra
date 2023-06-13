@@ -21,6 +21,11 @@ function updateQuantity(index, quantity) {
     renderItems();
 }
 
+function deleteItem(index) {
+    items.splice(index, 1);
+    renderItems();
+}
+
 function renderItems() {
     itemContainer.innerHTML = "";
 
@@ -45,9 +50,16 @@ function renderItems() {
             itemStatus.textContent = "Suficiente";
         }
 
+        const deleteButton = document.createElement("button");
+        deleteButton.textContent = "Eliminar";
+        deleteButton.addEventListener("click", () => {
+            deleteItem(index);
+        });
+
         itemDiv.appendChild(itemName);
         itemDiv.appendChild(itemQuantity);
         itemDiv.appendChild(itemStatus);
+        itemDiv.appendChild(deleteButton);
         itemContainer.appendChild(itemDiv);
     });
 }
